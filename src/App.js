@@ -3,19 +3,34 @@ import React from 'react';
 import FoodList from './foodlist.js';
 
 class App extends React.Component {
+	constructor(props) {
+		super(props);
+		console.log('starting from constructor');
+	}
 	state = {
 		count: 0
 	};
 	add = () => {
-		this.setState((potato) => ({
-			count: potato.count + 1
+		this.setState((current) => ({
+			count: current.count + 1
 		}));
-	}; // much better!!! best practice not to depend on external state
+	};
 
 	remove = () => {
-		this.setState({ count: this.state.count - 1 });
+		this.setState((current) => ({
+			count: current.count - 1
+		}));
 	};
-	//bad
+	componentDidMount = () => {
+		console.log('component rendered');
+	};
+
+	componentDidUpdate = () => {
+		console.log('component Updating finish');
+	};
+	componentWillUnmount = () => {
+		console.log('bye~~');
+	};
 	render() {
 		return (
 			<>
@@ -29,15 +44,15 @@ class App extends React.Component {
 export default App;
 
 /* note
-not good idea.. depending on state -> performance issue.
+Life Cycle
+
+Mounting => Born
+constructor -> getD... -> render -> componentDidMount
+
+Updating => update
+getD... -> should? -> render -> getSnopShotBeforeRender - > componentDidUpdate
 
 
-this.setState( current => ({count: current.count -1 }));
-
-Is the same as
-
-this.setState( current => {return current.count += 1});
-
-
-=> ({}) is part of implicit return
+Unmounting => dead (when change Page, change Component by state change .. etc)
+componentWillUnMount (when component is eliminated from DOM)
 */
