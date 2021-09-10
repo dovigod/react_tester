@@ -7,12 +7,15 @@ class App extends React.Component {
 		count: 0
 	};
 	add = () => {
-		this.setState({ count: this.state.count + 1 });
-	};
+		this.setState((potato) => ({
+			count: potato.count + 1
+		}));
+	}; // much better!!! best practice not to depend on external state
 
 	remove = () => {
 		this.setState({ count: this.state.count - 1 });
 	};
+	//bad
 	render() {
 		return (
 			<>
@@ -26,9 +29,15 @@ class App extends React.Component {
 export default App;
 
 /* note
-never change state directly, use methods setState
-else react wont refresh states
+not good idea.. depending on state -> performance issue.
 
-when setState,  react will call render function with new state!!!
-+ it will update only modified part
+
+this.setState( current => ({count: current.count -1 }));
+
+Is the same as
+
+this.setState( current => {return current.count += 1});
+
+
+=> ({}) is part of implicit return
 */
