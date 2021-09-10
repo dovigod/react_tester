@@ -1,9 +1,9 @@
 
 
 
-const Tester = (props) =>{
-  console.log(props)
-  return <h3> I Love components!!</h3>
+const Tester = ({name}) =>{
+  console.log(name)
+  return <h3> I Love components {name}!!</h3>
 }
 
 function App() {
@@ -11,7 +11,10 @@ function App() {
     <>
     <div className="App">
     </div>
-    <Tester name="jisang" potato = {true} someThing ={[1,2,3,4,5,false]}/>
+    <Tester name="jisang"/>
+    <Tester name="h"/>
+    <Tester name="s"/>
+    <Tester name="a"/>
     </>
     
   );
@@ -20,8 +23,7 @@ function App() {
 export default App;
 
 /* note
-how to send data to child component
- name="jisang"
- name => prop
- 'jisnag' = value
+props decomposing
+
+reusable components with modifing props
 */
