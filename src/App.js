@@ -1,62 +1,38 @@
+import Proptypes from 'prop-types';
+import FoodList from './foodlist.js';
 
+const Food = ({ name, image, rating }) => {
+	return (
+		<div className="foodItem">
+			<img src={image} alt={`food::${name}`} />
+			<h3> I Love components {name}!!</h3>
+			<h4>rating :: {rating}</h4>
+		</div>
+	);
+};
 
-const FoodList = [{
-  id: 1,
-  name: "Kimchi",
-  image:
-    "http://aeriskitchen.com/wp-content/uploads/2008/09/kimchi_bokkeumbap_02-.jpg"
-},
-{
-  id: 2,
-  name: "Samgyeopsal",
-  image:
-    "https://3.bp.blogspot.com/-hKwIBxIVcQw/WfsewX3fhJI/AAAAAAAAALk/yHxnxFXcfx4ZKSfHS_RQNKjw3bAC03AnACLcBGAs/s400/DSC07624.jpg"
-},
-{
-  id: 3,
-  name: "Bibimbap",
-  image:
-    "http://cdn-image.myrecipes.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/recipes/ck/12/03/bibimbop-ck-x.jpg?itok=RoXlp6Xb"
-},
-{
-  id: 4,
-  name: "Doncasu",
-  image:
-    "https://s3-media3.fl.yelpcdn.com/bphoto/7F9eTTQ_yxaWIRytAu5feA/ls.jpg"
-},
-{
-  id: 5,
-  name: "Kimbap",
-  image:
-    "http://cdn2.koreanbapsang.com/wp-content/uploads/2012/05/DSC_1238r-e1454170512295.jpg"
-}]
+Food.propTypes = {
+	name: Proptypes.string.isRequired,
+	image: Proptypes.string.isRequired,
+	rating: Proptypes.number.isRequired
+};
 
-const Food = ({id, name , image}) =>{
-  
-  return <div className="foodItem">
-    <img src={image} alt={`food::${name}`}/>
-    <h3> I Love components {name}!!</h3>
-  </div>
-  
-}
-const foodRenderer = (food) =>{
-    return <Food key={food.id} name={food.name} image={food.image}/>
-}
+const foodRenderer = (food) => {
+	return <Food key={food.id} name={food.name} image={food.image} rating={food.rating} />;
+};
 function App() {
-  return (
-    <>
-    <div className="App">
-    </div>
-    {FoodList.map(foodRenderer)}
-    </>
-    
-  );
+	return (
+		<>
+			<div className="App"></div>
+			{FoodList.map(foodRenderer)}
+		</>
+	);
 }
 
 export default App;
 
 /* note
-polishing,
-index.js:1 Warning: Each child in a list should have a unique "key" prop.
---> need private key value , if component pushed to list, it loses its originality
+check whether props are valid or not
+
+proptypes :: module -> checks whether its valid type
 */
