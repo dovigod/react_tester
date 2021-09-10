@@ -7,11 +7,11 @@ class App extends React.Component {
 		count: 0
 	};
 	add = () => {
-		this.state.count += 1;
+		this.setState({ count: this.state.count + 1 });
 	};
 
 	remove = () => {
-		this.state.count -= 1;
+		this.setState({ count: this.state.count - 1 });
 	};
 	render() {
 		return (
@@ -26,14 +26,9 @@ class App extends React.Component {
 export default App;
 
 /* note
-for real dynamic data from API , we need to know about 'state'
+never change state directly, use methods setState
+else react wont refresh states
 
-function components to class components
-
-render Method from react.component
-class component automatically execute render method
-
-unique object called 'state'
-
-onclick attribute automatically given from react (unique only for react)
+when setState,  react will call render function with new state!!!
++ it will update only modified part
 */
