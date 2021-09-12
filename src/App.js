@@ -2,7 +2,7 @@ import Proptypes from 'prop-types';
 import React from 'react';
 import axios from 'axios';
 import Movie from './Movie.js';
-
+import './App.css';
 let newKey = 99;
 
 class App extends React.Component {
@@ -30,10 +30,11 @@ class App extends React.Component {
 
 		return (
 			<>
-				<div>
-					{!isLoading
-						? movies.map((movie) => {
-								console.log(movie.id);
+				<section className="container">
+					{!isLoading ? (
+						<div className="movies">
+							{movies.map((movie) => {
+								console.log(movie.rating);
 								return (
 									<Movie
 										key={movie.id}
@@ -44,11 +45,17 @@ class App extends React.Component {
 										poster={movie.medium_cover_image}
 										year={movie.year}
 										runTime={movie.runtime}
+										genres={movie.genres}
 									/>
 								);
-						  })
-						: 'loading...'}
-				</div>
+							})}
+						</div>
+					) : (
+						<div className="loader">
+							<span className="loader_text">Loading...</span>
+						</div>
+					)}
+				</section>
 			</>
 		);
 	}
