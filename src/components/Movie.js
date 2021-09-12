@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './App.css';
+import './Movie.css';
 //doesn't need state
 
 const Movie = ({ id, title, summary, rating, poster, year, runTime, genres }) => {
