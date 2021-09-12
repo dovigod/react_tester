@@ -16,8 +16,6 @@ class Home extends React.Component {
 				data: { movies }
 			}
 		} = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating');
-		console.log(movies);
-
 		this.setState({ movies, isLoading: false });
 	};
 
@@ -33,22 +31,19 @@ class Home extends React.Component {
 				<section className="container">
 					{!isLoading ? (
 						<div className="movies">
-							{movies.map((movie) => {
-								console.log(movie.rating);
-								return (
-									<Movie
-										key={movie.id}
-										id={movie.id}
-										title={movie.title}
-										summary={movie.summary}
-										rating={movie.rating}
-										poster={movie.medium_cover_image}
-										year={movie.year}
-										runTime={movie.runtime}
-										genres={movie.genres}
-									/>
-								);
-							})}
+							{movies.map((movie, idx) => (
+								<Movie
+									key={idx}
+									id={movie.id}
+									title={movie.title}
+									summary={movie.summary}
+									rating={movie.rating}
+									poster={movie.medium_cover_image}
+									year={movie.year}
+									runTime={movie.runtime}
+									genres={movie.genres}
+								/>
+							))}
 						</div>
 					) : (
 						<div className="loader">

@@ -8,7 +8,7 @@ const Movie = ({ id, title, summary, rating, poster, year, runTime, genres }) =>
 		<div className="movie">
 			<Link
 				to={{
-					pathname: '/movie-detail',
+					pathname: `/movie-detail/${id}`,
 					state: {
 						year,
 						title,
@@ -24,9 +24,17 @@ const Movie = ({ id, title, summary, rating, poster, year, runTime, genres }) =>
 					<ul className="movie_genres">
 						{genres.map((genre, idx) => {
 							if (idx == genres.length - 1) {
-								return <li className="genre">{genre}</li>;
+								return (
+									<li key={idx} className="genre">
+										{genre}
+									</li>
+								);
 							}
-							return <li className="genre">{genre},</li>;
+							return (
+								<li key={idx} className="genre">
+									{genre},
+								</li>
+							);
 						})}
 					</ul>
 					<h4 className="movie_year"> {year}</h4>
