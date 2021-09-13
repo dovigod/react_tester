@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dovigod/react_tester/static/css/main.5b12513e.chunk.css",
-    "main.js": "/dovigod/react_tester/static/js/main.48d1faa5.chunk.js",
-    "main.js.map": "/dovigod/react_tester/static/js/main.48d1faa5.chunk.js.map",
-    "runtime-main.js": "/dovigod/react_tester/static/js/runtime-main.59988790.js",
-    "runtime-main.js.map": "/dovigod/react_tester/static/js/runtime-main.59988790.js.map",
-    "static/js/2.6b37da10.chunk.js": "/dovigod/react_tester/static/js/2.6b37da10.chunk.js",
-    "static/js/2.6b37da10.chunk.js.map": "/dovigod/react_tester/static/js/2.6b37da10.chunk.js.map",
-    "index.html": "/dovigod/react_tester/index.html",
-    "static/css/main.5b12513e.chunk.css.map": "/dovigod/react_tester/static/css/main.5b12513e.chunk.css.map",
-    "static/js/2.6b37da10.chunk.js.LICENSE.txt": "/dovigod/react_tester/static/js/2.6b37da10.chunk.js.LICENSE.txt"
+    "main.css": "/react_tester/static/css/main.a43bba17.chunk.css",
+    "main.js": "/react_tester/static/js/main.93cee103.chunk.js",
+    "main.js.map": "/react_tester/static/js/main.93cee103.chunk.js.map",
+    "runtime-main.js": "/react_tester/static/js/runtime-main.9d7f7432.js",
+    "runtime-main.js.map": "/react_tester/static/js/runtime-main.9d7f7432.js.map",
+    "static/js/2.b5faebe7.chunk.js": "/react_tester/static/js/2.b5faebe7.chunk.js",
+    "static/js/2.b5faebe7.chunk.js.map": "/react_tester/static/js/2.b5faebe7.chunk.js.map",
+    "index.html": "/react_tester/index.html",
+    "static/css/main.a43bba17.chunk.css.map": "/react_tester/static/css/main.a43bba17.chunk.css.map",
+    "static/js/2.b5faebe7.chunk.js.LICENSE.txt": "/react_tester/static/js/2.b5faebe7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.59988790.js",
-    "static/js/2.6b37da10.chunk.js",
-    "static/css/main.5b12513e.chunk.css",
-    "static/js/main.48d1faa5.chunk.js"
+    "static/js/runtime-main.9d7f7432.js",
+    "static/js/2.b5faebe7.chunk.js",
+    "static/css/main.a43bba17.chunk.css",
+    "static/js/main.93cee103.chunk.js"
   ]
 }
