@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dovigod/react_tester/static/css/main.5b12513e.chunk.css",
+    "main.js": "/dovigod/react_tester/static/js/main.48d1faa5.chunk.js",
+    "main.js.map": "/dovigod/react_tester/static/js/main.48d1faa5.chunk.js.map",
+    "runtime-main.js": "/dovigod/react_tester/static/js/runtime-main.59988790.js",
+    "runtime-main.js.map": "/dovigod/react_tester/static/js/runtime-main.59988790.js.map",
+    "static/js/2.6b37da10.chunk.js": "/dovigod/react_tester/static/js/2.6b37da10.chunk.js",
+    "static/js/2.6b37da10.chunk.js.map": "/dovigod/react_tester/static/js/2.6b37da10.chunk.js.map",
+    "index.html": "/dovigod/react_tester/index.html",
+    "static/css/main.5b12513e.chunk.css.map": "/dovigod/react_tester/static/css/main.5b12513e.chunk.css.map",
+    "static/js/2.6b37da10.chunk.js.LICENSE.txt": "/dovigod/react_tester/static/js/2.6b37da10.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59988790.js",
+    "static/js/2.6b37da10.chunk.js",
+    "static/css/main.5b12513e.chunk.css",
+    "static/js/main.48d1faa5.chunk.js"
+  ]
+}
